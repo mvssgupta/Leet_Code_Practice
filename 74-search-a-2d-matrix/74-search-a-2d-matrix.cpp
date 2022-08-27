@@ -1,7 +1,6 @@
 class Solution {
 public:
     bool searchMatrix(vector<vector<int>>& matrix, int target) {
-        vector<int> v;
         int ind=0;
         for(int i=0;i<matrix.size();i++)
         {
