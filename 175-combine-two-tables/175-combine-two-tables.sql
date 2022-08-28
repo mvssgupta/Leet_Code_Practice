@@ -1,5 +1,3 @@
 # Write your MySQL query statement below
 
-select ps.firstName , ps.lastName , ad.city , ad.state 
-from Person as ps 
-left join Address as ad on ps.personId = ad.personId;
+select Person.firstName,Person.lastName,Address.city,Address.state from Person left join Address on Person.personId=Address.personId
