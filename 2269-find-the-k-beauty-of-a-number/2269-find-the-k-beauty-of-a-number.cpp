@@ -1,7 +1,6 @@
 class Solution {
 public:
-    int kBeauty(int num,int k)
-    {
+    int divisorSubstrings(int num, int k) {
         string s=to_string(num);
         int i=0,j=0,count=0;
         string ch="";
@@ -18,8 +17,5 @@ public:
             j++;
         }
         return count;
-    }
-    int divisorSubstrings(int num, int k) {
-        return kBeauty(num,k);
     }
 };
