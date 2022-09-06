@@ -1,7 +1,7 @@
 class Solution {
 public:
-    int dp[1001][1001];
-    int rec(int i, int j , int m , int n)
+    int dp[101][101];
+    int rec(int i, int j , int &m , int &n)
     {
         if (i > m || j > n)
             return 0;
