@@ -11,10 +11,10 @@ public:
         // return true;
         
         //optimized solution->  O(N) time complexity
-        int mn = *min_element(arr.begin(), arr.end()), mx = *max_element(arr.begin(), arr.end()), N = arr.size();
-        if ((mx - mn) % (N - 1)!=0) return false;
-        int diff = (mx - mn) / (N - 1);
-        for (int i = 0; i < N;) {
+        int mn = *min_element(arr.begin(), arr.end()), mx = *max_element(arr.begin(), arr.end());
+        if ((mx - mn) % (arr.size() - 1)!=0) return false;
+        int diff = (mx - mn) / (arr.size() - 1);
+        for (int i = 0; i < arr.size();) {
             if (arr[i] == mn + i * diff) ++i;
             else if (((arr[i] - mn) % diff)!=0) return false;
             else {
