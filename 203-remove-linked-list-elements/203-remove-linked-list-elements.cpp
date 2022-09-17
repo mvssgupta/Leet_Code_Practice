@@ -15,17 +15,17 @@ public:
         ListNode* curr=head;
         while(curr!=NULL)
         {
-            if((curr->val)==val)
+            if((curr->val)==val)   //if we found a node with the target "val" then go to into this branch of code otherwise you are not allowed to go inside \U0001f602
             {
-                if(curr==head)
+                if(curr==head)    //if the val what we are looking for is at headNode of our linkedList then just move head to head->next
                 {
                     head=head->next;
                 }
-                else{
+                else{ 
                   prev->next = curr->next;  
                 }
             }
-            else{
+            else{              //if the current node we are seeing is not having the target "val" then simply go to next set of nodes.
                 prev=curr;                
             }
             curr = curr->next;
