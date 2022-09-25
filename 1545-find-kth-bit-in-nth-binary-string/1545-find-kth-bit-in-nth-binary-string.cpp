@@ -12,7 +12,7 @@ public:
     else we have to return inverse of s(n-1)'s (n-1-k)th bit ,  why because look at the following -
     
     s3 = 0111001 => s2+1+reverse(s2), here s2 = 011 , so s3 = 011 + 1 + 110 , so if k is greater than mid , 
-    we have to return inverse from begining.
+    we have to return inverse from begining, let k=5 then we have to return 2^3 = 8 , 8-k => 8-5=3 , so inverse of 3rd bit.
     */
     
     //brute force approach
