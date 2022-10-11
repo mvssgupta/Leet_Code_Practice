@@ -11,12 +11,8 @@ public:
          int N=stockPrices.size(),large=stockPrices[N-1],maxProfit=0;
         for(int i=N-1;i>=0;i--)
         {
-            if(stockPrices[i]>=large)
-            {
-                large=stockPrices[i];
-            }
-            stockPrices[i]=large-stockPrices[i];
-            maxProfit = max(maxProfit,stockPrices[i]);
+            if(stockPrices[i]>=large) large=stockPrices[i];
+            maxProfit = max(maxProfit,large-stockPrices[i]);
         }
         return maxProfit;
     }
