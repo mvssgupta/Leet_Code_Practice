@@ -9,15 +9,14 @@ public:
         // }
         // return maxPro;
          int N=stockPrices.size(),large=stockPrices[N-1],maxProfit=0;
-        vector<int> ans(N);
         for(int i=N-1;i>=0;i--)
         {
             if(stockPrices[i]>=large)
             {
                 large=stockPrices[i];
             }
-            ans[i]=large-stockPrices[i];
-            maxProfit = max(maxProfit,ans[i]);
+            stockPrices[i]=large-stockPrices[i];
+            maxProfit = max(maxProfit,stockPrices[i]);
         }
         return maxProfit;
     }
